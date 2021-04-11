@@ -1,4 +1,4 @@
-package com.example.interview;
+package com.spinthechoice.cons;
 
 public class Main {
     public static void main(final String[] args) {

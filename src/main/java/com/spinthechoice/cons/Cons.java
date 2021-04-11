@@ -1,4 +1,4 @@
-package com.example.interview;
+package com.spinthechoice.cons;
 
 public interface Cons<T> extends Iterable<T> {
     default boolean isEmpty() {

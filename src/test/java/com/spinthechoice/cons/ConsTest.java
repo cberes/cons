@@ -1,15 +1,15 @@
-package com.example.interview;
-
-import org.junit.Test;
+package com.spinthechoice.cons;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
-public class ConsTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+class ConsTest {
     @Test
-    public void testIterate() {
+    void testIterate() {
         final List<Integer> allValues = new LinkedList<>();
         for (Integer i : Value.of(1, 1, 2, 3, 5, 8, 13, 21, 34)) {
             allValues.add(i);
@@ -18,19 +18,19 @@ public class ConsTest {
     }
 
     @Test
-    public void testSize() {
+    void testSize() {
         assertEquals(9, Value.of(1, 1, 2, 3, 5, 8, 13, 21, 34).size());
     }
 
     @Test
-    public void testTail() {
+    void testTail() {
         final Cons<Integer> cons = Value.of(1, 50, 20, 15);
         assertEquals(3, cons.tail().size());
         assertEquals(50, (int) cons.tail().head());
     }
 
     @Test
-    public void testContains() {
+    void testContains() {
         final Cons<Integer> cons = Value.of(1, 50, 20, 15);
         assertTrue(cons.contains(1));
         assertTrue(cons.contains(50));
@@ -40,7 +40,7 @@ public class ConsTest {
     }
 
     @Test
-    public void testSingleElement() {
+    void testSingleElement() {
         assertEquals(1, Value.of(4).size());
         assertFalse(Value.of(4).isEmpty());
         assertEquals(4, (int) Value.of(4).head());
@@ -48,7 +48,7 @@ public class ConsTest {
     }
 
     @Test
-    public void testEmpty() {
+    void testEmpty() {
         assertTrue(Value.<Integer>of().isEmpty());
         assertEquals(0, Value.<Integer>of().size());
         assertFalse(Value.<Integer>of().iterator().hasNext());

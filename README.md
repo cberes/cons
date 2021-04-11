@@ -1,4 +1,9 @@
-# cons
+# data-structures
 
-A cons list implemented in Java.
+Some data structures implemented in Java.
 
+1. Cons list
+
+## Build the project
+
+    ./gradlew clean build

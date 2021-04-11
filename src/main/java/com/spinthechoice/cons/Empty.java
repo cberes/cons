@@ -1,4 +1,4 @@
-package com.example.interview;
+package com.spinthechoice.cons;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
