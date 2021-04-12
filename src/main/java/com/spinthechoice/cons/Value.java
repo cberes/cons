@@ -82,6 +82,7 @@ public final class Value<T> implements Cons<T> {
         return new Value<>(value);
     }
 
+    @SafeVarargs
     public static <E> Cons<E> of(final E... values) {
         if (values == null || values.length == 0) {
             return Empty.getInstance();
